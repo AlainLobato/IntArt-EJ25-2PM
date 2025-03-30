@@ -1,0 +1,329 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{float}
+
+\title{\textbf{Árboles de Decisión en Machine Learning}}
+\author{Alain Lobato}
+\date{30 de Marzo del 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{Introducción}
+Los árboles de decisión constituyen gráficamente la solución en posibles escenarios por condiciones, es uno de los algoritmos más utilizados en Machine Learning (ML). Inician en un nodo llamado raíz, a partir del cual se descomponen en más nodos que evalúan condiciones como ciertas o falsas. Se biparte hasta llegar a las hojas, que representan los nodos finales. Este algoritmo nos ayuda a analizar los datos para tomar la mejor decisión basada en estos datos y hacer predicciones.
+
+\section{Metodología}
+\subsection{Espacio de trabajo}
+Primero clonamos nuestro repositorio de la materia en nuestra máquina, luego creamos una carpeta llamada ``Árbol de Decisión''. Descargamos el archivo CSV para extraer los datos y creamos un archivo llamado \texttt{decision\_tree.py} donde desarrollamos nuestro código usando Visual Studio Code.
+
+Iniciamos importando las librerías necesarias, instalando las dependencias en caso de ser necesario.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{1.png}
+    \caption{Librerias necesarias.}
+    \label{fig:decision_tree}
+\end{figure}
+
+\subsection{Carga de datos}
+Leemos el archivo CSV de \textit{artists billboard} y verificamos su tamaño y los primeros 5 registros:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{2.png}
+    \caption{Lectura de archivo.}
+    \label{fig:decision_tree}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{3.png}
+    \caption{Resultado en consola de los registros.}
+    \label{fig:decision_tree}
+\end{figure}
+
+\texttt{Esto nos muestra: 635 registros en 11 características. Se visualizan las primeras 5 canciones registradas.}
+
+
+Agrupamos las canciones que fueron top en Billboard, asignando 1 si lo fueron y 0 si no lo fueron:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{4.png}
+    \caption{Agrupamos canciones por top Billboard.}
+    \label{fig:decision_tree}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{5.png}
+    \caption{Impresion en consola.}
+    \label{fig:decision_tree}
+\end{figure}
+
+\texttt{494 canciones no han sido top Billboard y 141 sí lo han sido.}
+
+\texttt{Ahora analizaremos cada cancion por aspecto: }
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{6.png}
+    \caption{Resultado en consola de los registros.}
+    \label{fig:decision_tree}
+\end{figure}
+\begin{itemize}
+    \item Tipo de artista.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{7.png}
+        \caption{Resultado de analisis por tipo de artista.}
+        \label{fig:decision_tree}
+    \end{figure}
+    \item Mood.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{8.png}
+        \caption{Resultado de analisis por mood.}
+        \label{fig:decision_tree}
+    \end{figure}
+    \item Tempo.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{9.png}
+        \caption{Resultado de analisis por tempo.}
+        \label{fig:decision_tree}
+    \end{figure}
+    \item Género.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{10.png}
+        \caption{Resultado de analisis por género.}
+        \label{fig:decision_tree}
+    \end{figure}
+    \item Año de nacimiento.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{11.png}
+        \caption{Resultado de analisis por año de nacimiento.}
+        \label{fig:decision_tree}
+    \end{figure}
+\end{itemize}
+
+Ahora analizamos las canciones top y las que no lo fueron en función de las fechas \textit{chart}, obteniendo los siguientes resultados:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{12.png}
+    \caption{Codificacion de analisis.}
+    \label{fig:decision_tree}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{13.png}
+    \caption{Resultado del grafico de analisis.}
+    \label{fig:decision_tree}
+\end{figure}
+
+\subsection{Preprocesamiento de datos}
+Sustituimos los años que sean 0 por un valor \texttt{None}. Calculamos la edad restando el año de aparición menos el año de nacimiento usando una función lambda, asignándola a \texttt{edad\_en\_billboard}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{14.png}
+    \caption{Codificacion para sustitucion de edades por None.}
+    \label{fig:decision_tree}
+\end{figure}
+
+Asignamos edades aleatorias basadas en el promedio y la desviación estándar, visualizándolas en un gráfico.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{15.png}
+    \caption{Asignacion de edades aleatorias.}
+    \label{fig:decision_tree}
+\end{figure}
+
+\begin{verbatim}
+Edad promedio, desviación estándar e intervalo de edades a asignar.
+\end{verbatim}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{16.png}
+    \caption{Analisis de lo que obtenemos en consola.}
+    \label{fig:decision_tree}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{17.png}
+    \caption{Resultado del grafico.}
+    \label{fig:decision_tree}
+\end{figure}
+
+Ahora mapeamos los datos priorizando intereses y limpiamos los datos eliminando columnas no utilizadas.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{18.png}
+    \caption{Limpieza de datos.}
+    \label{fig:decision_tree}
+\end{figure}
+
+\subsection{Construcción del árbol de decisión}
+Probamos el top 1 de los diferentes datos mapeados:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{19.png}
+    \caption{Construccion de tablas con su top 1.}
+    \label{fig:decision_tree}
+\end{figure}
+
+\begin{itemize}
+    \item Mood.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{20.png}
+        \caption{Tabla de mood con top 1.}
+        \label{fig:decision_tree}
+    \end{figure}
+    \item Artista.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{21.png}
+        \caption{Tabla de artista con top 1.}
+        \label{fig:decision_tree}
+    \end{figure}
+    \item Género.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{22.png}
+        \caption{Tabla de genero con top 1.}
+        \label{fig:decision_tree}
+    \end{figure}
+    \item Tempo.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{23.png}
+        \caption{Tabla de tempo con top 1.}
+        \label{fig:decision_tree}
+    \end{figure}
+    \item Duración.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{24.png}
+        \caption{Tabla de duración con top 1.}
+        \label{fig:decision_tree}
+    \end{figure}
+    \item Edad.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{25.png}
+        \caption{Tabla de edad con top 1.}
+        \label{fig:decision_tree}
+    \end{figure}
+\end{itemize}
+
+Finalmente, creamos el árbol de decisión con \texttt{sklearn}, definiendo los parámetros necesarios. Realizamos pruebas para determinar la profundidad ideal del árbol:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{26.png}
+    \caption{Construccion de arbol de decision.}
+    \label{fig:decision_tree}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{27.png}
+    \caption{Pruebas.}
+    \label{fig:decision_tree}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{28.png}
+    \caption{Tabla para visualizar el valor optimo del Max Depth.}
+    \label{fig:decision_tree}
+\end{figure}
+
+\begin{verbatim}
+Profundidad óptima encontrada: 7.
+\end{verbatim}
+
+Visualizamos el árbol configurado y verificamos su precisión.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{29.png}
+    \caption{Verificamos la precision.}
+    \label{fig:decision_tree}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../tree1.png}
+    \caption{Arbol de decision.}
+    \label{fig:decision_tree}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{30.png}
+    \caption{Precision del arbol.}
+    \label{fig:decision_tree}
+\end{figure}
+
+\section{Resultados}
+Para probar el árbol de decisión, evaluamos dos canciones: \textit{Havana} de Camila Cabello (top) y \textit{Believer} de Imagine Dragons (no top):
+
+\begin{itemize}
+    \item \textbf{Havana – Camila Cabello}: Resultado del modelo.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{31.png}
+        \caption{Codificacion para analizar la cancion.}
+        \label{fig:decision_tree}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{32.png}
+        \caption{Resultado.}
+        \label{fig:decision_tree}
+    \end{figure}
+
+    \item \textbf{Believer – Imagine Dragons}: Resultado del modelo.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{33.png}
+        \caption{Codificacion para analizar la cancion.}
+        \label{fig:decision_tree}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{34.png}
+        \caption{Resultado.}
+        \label{fig:decision_tree}
+    \end{figure}
+\end{itemize}
+
+\texttt{El modelo predice que la canción \textit{Havana} de Camila Cabello es un top 1 con una probabilidad de 90.1\% y que \textit{Believer} de Imagine Dragons no es un top 1 con una probabilidad de 65\%.}
+
+\section{Conclusión}
+Se presentaron inconvenientes con la codificación debido a errores en el código original y un valor incorrecto de \texttt{max\_depth} (4 en lugar de 7). Se instalaron las paqueterías necesarias y se solucionó un problema con Graphviz que no identificaba el \texttt{PATH}. A pesar de estos desafíos, modificando y limpiando los datos, logramos obtener un resultado favorable. De cualquier manera durante esta actividad se aprendió a usar el algoritmo de árboles de decisión, su construcción y la importancia de la limpieza de datos.
+
+\section{Referencias}
+\begin{itemize}
+    \item Materiales de clase (2025). UANL.
+    \item Bagnato J (2019). \textit{Aprende Machine Learning}. Leanpub.
+\end{itemize}
+
+\end{document}
