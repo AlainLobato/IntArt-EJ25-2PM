@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1743364330.79895 "c:/Users/Alain/OneDrive/Documentos/FCFM/Sem 6/IA/IntArt-EJ25-2PM/Arbol de Decision/LaTex/decision_tree.tex" "decision_tree.pdf" "decision_tree" 1743364338.69858 0
+["pdflatex"] 1743366872.50827 "c:/Users/Alain/OneDrive/Documentos/FCFM/Sem 6/IA/IntArt-EJ25-2PM/Arbol de Decision/LaTex/decision_tree.tex" "decision_tree.pdf" "decision_tree" 1743366880.72031 0
   "../tree1.png" 1743352391 221162 c52e35c16583ff34c14abbd0c5ad67e7 ""
   "1.png" 1743360531 10799 a8df635c94a40ba94e34c0957ca6f694 ""
   "10.png" 1743360839 11903 6486b834908e6b6e8847f2ce5e5c0ef4 ""
@@ -102,10 +102,10 @@
   "C:/Users/Alain/AppData/Local/Programs/MiKTeX/tex/latex/refcount/refcount.sty" 1576433952 9878 9e94e8fa600d95f9c7731bb21dfb67a4 ""
   "C:/Users/Alain/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1657800696 9714 ba3194bd52c8499b3f1e3eb91d409670 ""
   "C:/Users/Alain/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "c:/Users/Alain/OneDrive/Documentos/FCFM/Sem 6/IA/IntArt-EJ25-2PM/Arbol de Decision/LaTex/decision_tree.tex" 1743364315 11137 ccaa1f64f384fd33df99e2e318a366f2 ""
-  "decision_tree.aux" 1743364337 9043 1ca762a66f09b2418fa5f621a682d861 "pdflatex"
-  "decision_tree.out" 1743364337 1216 badf8c33a9ed4d8246abd6a3e324f33c "pdflatex"
-  "decision_tree.tex" 1743364315 11137 ccaa1f64f384fd33df99e2e318a366f2 ""
+  "c:/Users/Alain/OneDrive/Documentos/FCFM/Sem 6/IA/IntArt-EJ25-2PM/Arbol de Decision/LaTex/decision_tree.tex" 1743366861 10111 d44ca2b0b2bddfa8aede4595d83dd7e6 ""
+  "decision_tree.aux" 1743366879 6428 784a2e5a703a2467c58397389c2d58f5 "pdflatex"
+  "decision_tree.out" 1743366879 1216 badf8c33a9ed4d8246abd6a3e324f33c "pdflatex"
+  "decision_tree.tex" 1743366861 10111 d44ca2b0b2bddfa8aede4595d83dd7e6 ""
   (generated)
   "decision_tree.aux"
   "decision_tree.log"

@@ -27,7 +27,7 @@ Iniciamos importando las librerías necesarias, instalando las dependencias en c
     \centering
     \includegraphics[width=0.8\textwidth]{1.png}
     \caption{Librerias necesarias.}
-    \label{fig:decision_tree}
+    \label{fig:libraries}
 \end{figure}
 
 \subsection{Carga de datos}
@@ -37,14 +37,14 @@ Leemos el archivo CSV de \textit{artists billboard} y verificamos su tamaño y l
     \centering
     \includegraphics[width=0.8\textwidth]{2.png}
     \caption{Lectura de archivo.}
-    \label{fig:decision_tree}
+    \label{fig:file_reading}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{3.png}
     \caption{Resultado en consola de los registros.}
-    \label{fig:decision_tree}
+    \label{fig:console_output}
 \end{figure}
 
 \texttt{Esto nos muestra: 635 registros en 11 características. Se visualizan las primeras 5 canciones registradas.}
@@ -56,14 +56,12 @@ Agrupamos las canciones que fueron top en Billboard, asignando 1 si lo fueron y 
     \centering
     \includegraphics[width=0.8\textwidth]{4.png}
     \caption{Agrupamos canciones por top Billboard.}
-    \label{fig:decision_tree}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{5.png}
     \caption{Impresion en consola.}
-    \label{fig:decision_tree}
 \end{figure}
 
 \texttt{494 canciones no han sido top Billboard y 141 sí lo han sido.}
@@ -73,7 +71,6 @@ Agrupamos las canciones que fueron top en Billboard, asignando 1 si lo fueron y 
     \centering
     \includegraphics[width=0.8\textwidth]{6.png}
     \caption{Resultado en consola de los registros.}
-    \label{fig:decision_tree}
 \end{figure}
 \begin{itemize}
     \item Tipo de artista.
@@ -81,35 +78,35 @@ Agrupamos las canciones que fueron top en Billboard, asignando 1 si lo fueron y 
         \centering
         \includegraphics[width=0.8\textwidth]{7.png}
         \caption{Resultado de analisis por tipo de artista.}
-        \label{fig:decision_tree}
+
     \end{figure}
     \item Mood.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.8\textwidth]{8.png}
         \caption{Resultado de analisis por mood.}
-        \label{fig:decision_tree}
+
     \end{figure}
     \item Tempo.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.8\textwidth]{9.png}
         \caption{Resultado de analisis por tempo.}
-        \label{fig:decision_tree}
+
     \end{figure}
     \item Género.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.8\textwidth]{10.png}
         \caption{Resultado de analisis por género.}
-        \label{fig:decision_tree}
+
     \end{figure}
     \item Año de nacimiento.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.8\textwidth]{11.png}
         \caption{Resultado de analisis por año de nacimiento.}
-        \label{fig:decision_tree}
+
     \end{figure}
 \end{itemize}
 
@@ -119,14 +116,12 @@ Ahora analizamos las canciones top y las que no lo fueron en función de las fec
     \centering
     \includegraphics[width=0.8\textwidth]{12.png}
     \caption{Codificacion de analisis.}
-    \label{fig:decision_tree}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{13.png}
     \caption{Resultado del grafico de analisis.}
-    \label{fig:decision_tree}
 \end{figure}
 
 \subsection{Preprocesamiento de datos}
@@ -136,7 +131,6 @@ Sustituimos los años que sean 0 por un valor \texttt{None}. Calculamos la edad 
     \centering
     \includegraphics[width=0.8\textwidth]{14.png}
     \caption{Codificacion para sustitucion de edades por None.}
-    \label{fig:decision_tree}
 \end{figure}
 
 Asignamos edades aleatorias basadas en el promedio y la desviación estándar, visualizándolas en un gráfico.
@@ -145,7 +139,6 @@ Asignamos edades aleatorias basadas en el promedio y la desviación estándar, v
     \centering
     \includegraphics[width=0.8\textwidth]{15.png}
     \caption{Asignacion de edades aleatorias.}
-    \label{fig:decision_tree}
 \end{figure}
 
 \begin{verbatim}
@@ -156,14 +149,12 @@ Edad promedio, desviación estándar e intervalo de edades a asignar.
     \centering
     \includegraphics[width=0.8\textwidth]{16.png}
     \caption{Analisis de lo que obtenemos en consola.}
-    \label{fig:decision_tree}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{17.png}
     \caption{Resultado del grafico.}
-    \label{fig:decision_tree}
 \end{figure}
 
 Ahora mapeamos los datos priorizando intereses y limpiamos los datos eliminando columnas no utilizadas.
@@ -172,7 +163,6 @@ Ahora mapeamos los datos priorizando intereses y limpiamos los datos eliminando 
     \centering
     \includegraphics[width=0.8\textwidth]{18.png}
     \caption{Limpieza de datos.}
-    \label{fig:decision_tree}
 \end{figure}
 
 \subsection{Construcción del árbol de decisión}
@@ -182,7 +172,6 @@ Probamos el top 1 de los diferentes datos mapeados:
     \centering
     \includegraphics[width=0.8\textwidth]{19.png}
     \caption{Construccion de tablas con su top 1.}
-    \label{fig:decision_tree}
 \end{figure}
 
 \begin{itemize}
@@ -191,42 +180,42 @@ Probamos el top 1 de los diferentes datos mapeados:
         \centering
         \includegraphics[width=0.8\textwidth]{20.png}
         \caption{Tabla de mood con top 1.}
-        \label{fig:decision_tree}
+
     \end{figure}
     \item Artista.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.8\textwidth]{21.png}
         \caption{Tabla de artista con top 1.}
-        \label{fig:decision_tree}
+
     \end{figure}
     \item Género.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.8\textwidth]{22.png}
         \caption{Tabla de genero con top 1.}
-        \label{fig:decision_tree}
+
     \end{figure}
     \item Tempo.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.8\textwidth]{23.png}
         \caption{Tabla de tempo con top 1.}
-        \label{fig:decision_tree}
+
     \end{figure}
     \item Duración.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.8\textwidth]{24.png}
         \caption{Tabla de duración con top 1.}
-        \label{fig:decision_tree}
+
     \end{figure}
     \item Edad.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.8\textwidth]{25.png}
         \caption{Tabla de edad con top 1.}
-        \label{fig:decision_tree}
+
     \end{figure}
 \end{itemize}
 
@@ -236,21 +225,18 @@ Finalmente, creamos el árbol de decisión con \texttt{sklearn}, definiendo los 
     \centering
     \includegraphics[width=0.8\textwidth]{26.png}
     \caption{Construccion de arbol de decision.}
-    \label{fig:decision_tree}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{27.png}
     \caption{Pruebas.}
-    \label{fig:decision_tree}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{28.png}
     \caption{Tabla para visualizar el valor optimo del Max Depth.}
-    \label{fig:decision_tree}
 \end{figure}
 
 \begin{verbatim}
@@ -263,21 +249,18 @@ Visualizamos el árbol configurado y verificamos su precisión.
     \centering
     \includegraphics[width=0.8\textwidth]{29.png}
     \caption{Verificamos la precision.}
-    \label{fig:decision_tree}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{../tree1.png}
     \caption{Arbol de decision.}
-    \label{fig:decision_tree}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{30.png}
     \caption{Precision del arbol.}
-    \label{fig:decision_tree}
 \end{figure}
 
 \section{Resultados}
@@ -289,14 +272,14 @@ Para probar el árbol de decisión, evaluamos dos canciones: \textit{Havana} de 
         \centering
         \includegraphics[width=0.8\textwidth]{31.png}
         \caption{Codificacion para analizar la cancion.}
-        \label{fig:decision_tree}
+
     \end{figure}
 
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.8\textwidth]{32.png}
         \caption{Resultado.}
-        \label{fig:decision_tree}
+
     \end{figure}
 
     \item \textbf{Believer – Imagine Dragons}: Resultado del modelo.
@@ -304,14 +287,14 @@ Para probar el árbol de decisión, evaluamos dos canciones: \textit{Havana} de 
         \centering
         \includegraphics[width=0.8\textwidth]{33.png}
         \caption{Codificacion para analizar la cancion.}
-        \label{fig:decision_tree}
+
     \end{figure}
 
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.8\textwidth]{34.png}
         \caption{Resultado.}
-        \label{fig:decision_tree}
+
     \end{figure}
 \end{itemize}
 

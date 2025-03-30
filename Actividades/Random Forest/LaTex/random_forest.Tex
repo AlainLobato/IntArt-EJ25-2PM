@@ -1,0 +1,98 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+
+\title{Random Forest}
+\author{Alain Lobato}
+\date{30 de Marzo del 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{Introducción}
+Un Random Forest es un algoritmo de aprendizaje automático de uso común, el cual utiliza distintos árboles de decisión para obtener un resultado único. Este surge debido al \textit{overfitting} en los árboles de decisión. Se crea este modelo para evitar este problema, memorizando soluciones en lugar de realizar un aprendizaje generalizado, trabajando distintos árboles en conjunto.
+
+\section{Metodología}
+Primero clonamos nuestro repositorio de la materia en nuestra máquina y luego creamos una carpeta llamada ``Random Forest''. Descargamos el archivo CSV para extraer los datos y creamos un archivo llamado \texttt{random\_forest.py} donde desarrollamos nuestro código usando Visual Studio Code.
+
+Iniciamos importando las librerías necesarias, instalando las dependencias en caso de ser necesario.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/1.png}
+    \caption{Importación de librerías}
+\end{figure}
+
+Ahora cargaremos los datos e imprimimos con \texttt{head} los primeros 5 registros, así como sus dimensiones.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/2.png}
+    \caption{Carga de datos}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/3.png}
+    \caption{Resultados de la carga de datos}
+\end{figure}
+
+Ahora bipartimos los datos en clases, donde 0 es un acceso válido y 1 es un acceso fraudulento:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/4.png}
+    \caption{Clasificación de datos}
+\end{figure}
+
+Podemos ver cómo se encuentra un registro más cargado que el otro, con demasiados registros válidos y pocos registros fraudulentos.
+
+Ahora creamos el dataset, separamos los datos válidos y fraudulentos, así como hacemos una división entre los datos independientes y nuestro \textit{target}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/5.png}
+    \caption{Separación de datos}
+\end{figure}
+
+Ahora crearemos nuestro Random Forest usando los datos que ya separamos y lo entrenamos.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/6.png}
+    \caption{Creación y entrenamiento del modelo}
+\end{figure}
+
+\section{Resultados}
+Vamos a predecir nuestros datos de test y mostramos los resultados usando la función que anteriormente declaramos:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/7.png}
+    \caption{Predicción de datos de prueba}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/8.png}
+    \caption{Resultados de la predicción}
+\end{figure}
+
+Podemos ver que se tienen buenos resultados. El reporte de clasificación arroja un \textit{recall} de 0.98 y un F1-score macro promedio de 0.55, siendo muy buenos resultados.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/9.png}
+    \caption{Reporte de clasificación}
+\end{figure}
+
+\section{Conclusión}
+Gracias a los Random Forest, se pudo evitar el problema de \textit{overfitting} que ocurre al usar solo un árbol de decisión, lo que garantiza un mejor resultado a la hora de predecir algún dato. No fue necesario hacer ningún ajuste al código y todo resultó sencillo de realizar. Se repasó muy bien la información en esta práctica.
+
+\section{Referencias}
+Material de clase (2025). UANL.\\
+Bagnato J. (2010). \textit{Aprende Machine Learning}. Leanpub.
+
+\end{document}
