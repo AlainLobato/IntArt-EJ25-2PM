@@ -1,0 +1,194 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{float}
+
+\title{Análisis del Algoritmo K-NN}
+\author{Alain Lobato}
+\date{30 de Marzo del 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{Introducción}
+El algoritmo K-NN es un algoritmo utilizado en Machine Learning basado en instancias. Se puede utilizar para clasificar nuevas muestras o realizar predicciones. Al ser un algoritmo demasiado simple, lo convierte en uno de los algoritmos más usados por principiantes. Este algoritmo consiste en clasificar valores al identificar los puntos de datos más cercanos o similares los cuales fueron aprendidos durante la fase de entrenamiento, infiriendo nuevos puntos en base a este conocimiento. Es más eficiente cuando se trabaja con pocos datos o pocas características.
+
+\section{Metodología}
+Primero clonamos nuestro repositorio de la materia en nuestra máquina y luego creamos una carpeta llamada ``K-Nearest-Neighbor''. Descargamos el archivo CSV para extraer los datos y creamos un archivo llamado \texttt{KNN.py} donde desarrollamos nuestro código usando Visual Studio Code.
+
+Iniciamos importando las librerías necesarias, instalando las dependencias en caso de ser necesario.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/1.png}
+    \caption{Importación de librerías necesarias.}
+\end{figure}
+
+Ahora, vamos a leer el archivo CSV, así como validar que se carguen bien los datos, visualizando los primeros 10 registros y usando un \texttt{describe()} para ver ciertos valores estadísticos de nuestra tabla.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/2.png}
+    \caption{Lectura del archivo CSV.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/3.png}
+    \caption{Primeros 10 registros.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/4.png}
+    \caption{Descripción estadística de los datos.}
+\end{figure}
+
+Generamos un histograma con estos datos:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/5.png}
+    \caption{Generación de histogramas.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/6.png}
+    \caption{Histograma de Wordcount.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/7.png}
+    \caption{Histograma de Star Rating.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/8.png}
+    \caption{Histograma de Sentiment Value.}
+\end{figure}
+
+Ahora dividimos los datos agrupándolos según su \texttt{star rating} y lo graficamos:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/9.png}
+    \caption{Agrupación de datos por Star Rating.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/10.png}
+    \caption{Grafica usando Star Rating.}
+\end{figure}
+
+Ahora lo hacemos graficando dependiendo del \texttt{word count}:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/11.png}
+    \caption{Histograma usando Word Count.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/12.png}
+    \caption{Grafica usando Word Count.}
+\end{figure}
+
+Ahora usaremos estas dos características para utilizarlas como variable independiente y el target, creando así los conjuntos de entrenamiento y prueba:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/13.png}
+    \caption{Creación de los conjuntos de entrenamiento y prueba.}
+\end{figure}
+
+Ahora empezamos a crear nuestro modelo KNN fijando el número \texttt{k} como 7, e imprimimos la precisión de los conjuntos de prueba y entrenamiento:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/14.png}
+    \caption{Codificacion de KNN.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/15.png}
+    \caption{Precisión del conjunto de prueba.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/16.png}
+    \caption{Mostrar tabla de precisio .}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/17.png}
+    \caption{Buen porcentaje de F1.}
+\end{figure}
+
+Ahora vamos a graficar la clasificación obtenida para visualizar las predicciones:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/18.png}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/19.png}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/20.png}
+    \caption{Gráfica de clasificación.}
+\end{figure}
+
+\texttt{Gracias a esta grafica podemos ver, por ejemplo que los usuarios con 1 estrella tienen hasta 25 palabras y un sentimiento negativo, o que los de 5 estrellas tienen hasta 10 palabras y un sentimiento positivo. }
+Ahora vamos a realizar un análisis para diferentes valores de \texttt{k} del 1 al 20 y ver cuál es el mejor graficándolo:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/21.png}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/22.png}
+    \caption{Análisis del valor óptimo de k.}
+\end{figure}
+
+Podemos ver que al tener \texttt{k} entre 7-14 y 16, nuestra precisión es más exitosa.
+
+\section{Resultados}
+Después de nuestra primera predicción nos encontramos que para 5 palabras y un nivel de sentimiento de 1 se nos valorará con 5 estrellas.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/23.png}
+    \caption{Predicción para 5 palabras y sentimiento 1.}
+\end{figure}
+
+Si predecimos por coordenadas, para nuestras coordenadas (20, 0), existe un 97\% de que nos den 3 estrellas.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/24.png}
+    \caption{Predicción para coordenadas (20,0).}
+\end{figure}
+
+\section{Conclusión}
+Es interesante y de hecho demasiado fácil usar el algoritmo KNN, es demasiado intuitivo y fácil de configurar. Sin embargo, la desventaja de que trabaje con conjuntos de datos pequeños nos encapsula en una burbuja donde probablemente nuestras predicciones serán muy generalizadas. Aun así, realizar predicciones me permitió entender mejor cómo funciona este algoritmo.
+
+\section{Referencias}
+Materiales de clase (2025). UANL.\\
+Bagnato J. (2019). Aprende Machine Learning. Leanpub.
+
+\end{document}
