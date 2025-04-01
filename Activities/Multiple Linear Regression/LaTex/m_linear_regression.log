@@ -1,0 +1,177 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.8.13)  31 MAR 2025 22:56
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**"c:/Users/Alain/OneDrive/Documentos/FCFM/Sem 6/IA/Github/IntArt-EJ25-2PM/Activities/Multiple Linear Regression/LaTex/m_linear_regression.tex"
+(c:/Users/Alain/OneDrive/Documentos/FCFM/Sem 6/IA/Github/IntArt-EJ25-2PM/Activities/Multiple Linear Regression/LaTex/m_linear_regression.tex
+LaTeX2e <2024-06-01> patch level 2
+L3 programming layer <2024-07-20>
+(C:\Users\Alain\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2024/02/08 v1.4n Standard LaTeX document class
+(C:\Users\Alain\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
+File: size10.clo 2024/02/08 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count194
+\c@section=\count195
+\c@subsection=\count196
+\c@subsubsection=\count197
+\c@paragraph=\count198
+\c@subparagraph=\count199
+\c@figure=\count266
+\c@table=\count267
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen141
+) (C:\Users\Alain\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (C:\Users\Alain\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+) (C:\Users\Alain\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2024/05/23 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+ (C:\Users\Alain\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+) (C:\Users\Alain\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+ (C:\Users\Alain\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen142
+\Gin@req@width=\dimen143
+) (C:\Users\Alain\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks18
+\inpenc@posthook=\toks19
+) (C:\Users\Alain\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count268
+\float@exts=\toks20
+\float@box=\box52
+\@float@everytoks=\toks21
+\@floatcapt=\box53
+) (C:\Users\Alain\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count269
+\l__pdf_internal_box=\box54
+) (m_linear_regression.aux)
+\openout1 = `m_linear_regression.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+ (C:\Users\Alain\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count270
+\scratchdimen=\dimen144
+\scratchbox=\box55
+\nofMPsegments=\count271
+\nofMParguments=\count272
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count273
+\MPscratchDim=\dimen145
+\MPnumerator=\count274
+\makeMPintoPDFobject=\count275
+\everyMPtoPDFconversion=\toks23
+) (C:\Users\Alain\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (C:\Users\Alain\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 12.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 12.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 12.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 17.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 17.
+
+Overfull \hbox (2.30823pt too wide) in paragraph at lines 24--25
+\OT1/cmr/m/n/10 amos el archivo CSV con los datos y creamos el archivo \OT1/cmtt/m/n/10 m[]linear[]regression.py
+ []
+
+<img/1.png, id=1, 377.15906pt x 149.8097pt>
+File: img/1.png Graphic file (type png)
+<use img/1.png>
+Package pdftex.def Info: img/1.png  used on input line 30.
+(pdftex.def)             Requested size: 276.00105pt x 109.6276pt.
+
+
+[1
+
+{C:/Users/Alain/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./img/1.png>]
+<img/2.png, id=16, 729.47531pt x 108.405pt>
+File: img/2.png Graphic file (type png)
+<use img/2.png>
+Package pdftex.def Info: img/2.png  used on input line 38.
+(pdftex.def)             Requested size: 276.00105pt x 41.01567pt.
+<img/3.png, id=17, 495.35063pt x 197.23688pt>
+File: img/3.png Graphic file (type png)
+<use img/3.png>
+Package pdftex.def Info: img/3.png  used on input line 46.
+(pdftex.def)             Requested size: 276.00105pt x 109.89812pt.
+<img/4.png, id=18, 225.84375pt x 55.70813pt>
+File: img/4.png Graphic file (type png)
+<use img/4.png>
+Package pdftex.def Info: img/4.png  used on input line 54.
+(pdftex.def)             Requested size: 276.00105pt x 68.08875pt.
+<img/5.png, id=19, 549.55313pt x 396.7322pt>
+File: img/5.png Graphic file (type png)
+<use img/5.png>
+Package pdftex.def Info: img/5.png  used on input line 62.
+(pdftex.def)             Requested size: 276.00105pt x 199.25548pt.
+
+
+[2 <./img/2.png> <./img/3.png> <./img/4.png>]
+<img/7.png, id=26, 271.76532pt x 52.69687pt>
+File: img/7.png Graphic file (type png)
+<use img/7.png>
+Package pdftex.def Info: img/7.png  used on input line 71.
+(pdftex.def)             Requested size: 276.00105pt x 53.52092pt.
+<img/8.png, id=27, 112.92188pt x 12.7978pt>
+File: img/8.png Graphic file (type png)
+<use img/8.png>
+Package pdftex.def Info: img/8.png  used on input line 77.
+(pdftex.def)             Requested size: 276.00105pt x 31.28416pt.
+
+
+[3 <./img/5.png> <./img/7.png> <./img/8.png>]
+
+[4] (m_linear_regression.aux)
+ ***********
+LaTeX2e <2024-06-01> patch level 2
+L3 programming layer <2024-07-20>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 1456 strings out of 473898
+ 25207 string characters out of 5726479
+ 1930960 words of memory out of 5000000
+ 24358 multiletter control sequences out of 15000+600000
+ 561877 words of font info for 49 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 57i,6n,65p,628b,228s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Alain/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Alain/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Alain/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Alain/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Alain/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Alain/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Alain/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Alain/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on m_linear_regression.pdf (4 pages, 139394 bytes).
+PDF statistics:
+ 70 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+

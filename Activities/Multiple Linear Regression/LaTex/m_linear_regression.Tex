@@ -1,0 +1,90 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+
+\title{Regresion Lineal Multiple}
+\author{Alain Lobato}
+\date{31 de Marzo del 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduccion}
+La regresion lineal multiple es una extension de la regresion lineal simple, permitiendo analizar la relacion entre una variable dependiente y multiples variables predictoras. En lugar de ajustar una linea recta en un plano bidimensional, este modelo ajusta un hiperplano en un espacio de mayor dimension. La ecuacion ahora toma la forma:
+
+\begin{equation}
+Y = b + m_1X_1 + m_2X_2 + \dots + m_nX_n
+\end{equation}
+
+A\~nadir mas variables nos permite obtener predicciones mas complejas y, en muchos casos, mas precisas. Sin embargo, tambien aumenta la necesidad de interpretar correctamente los coeficientes y evitar problemas como la multicolinealidad.
+
+\section{Metodologia}
+Primero, clonamos nuestro repositorio de la materia en nuestra maquina y creamos una carpeta llamada \texttt{Multiple Linear Regression}. Luego, descargamos el archivo CSV con los datos y creamos el archivo \texttt{m\_linear\_regression.py} donde desarrollamos nuestro codigo en Visual Studio Code.
+
+Iniciamos importando las librerias necesarias e instalando las dependencias en caso de ser necesario.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{img/1.png}
+    \caption{Importacion de librerias.}
+\end{figure}
+
+Ahora, agregamos dos variables predictivas adicionales, lo que nos permitira graficar en 3D.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{img/2.png}
+    \caption{Agregacion de variables predictivas.}
+\end{figure}
+
+Creamos nuestro modelo de regresion lineal y lo entrenamos con los datos, imprimiendo los puntajes obtenidos.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{img/3.png}
+    \caption{Entrenamiento del modelo.}
+\end{figure}
+
+Los puntajes obtenidos se muestran a continuacion:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{img/4.png}
+    \caption{Puntajes de la regresion.}
+\end{figure}
+
+Graficamos los datos originales en azul y los proyectados sobre el plano de regresion en rojo en un espacio tridimensional.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{img/5.png}
+    \caption{Visualizacion 3D de los datos y el modelo de regresion.}
+\end{figure}
+
+\section{Resultados}
+Realizamos una prediccion para un post con 2000 palabras, 10 enlaces, 4 comentarios y 6 imagenes.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{img/7.png}
+    \caption{Prediccion de shares.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{img/8.png}
+    \caption{Resultados de la prediccion.}
+\end{figure}
+
+Podemos ver que la prediccion nos da un valor aproximado de 20518 compartidos, mejorando el resultado de la regresion lineal simple.
+
+\section{Conclusion}
+La regresion lineal multiple nos permite trabajar con mas de una variable predictora, haciendo que nuestras predicciones sean mas completas y menos susceptibles a sesgos. Aunque en este caso los resultados mejoraron, tambien nos damos cuenta de la importancia de elegir adecuadamente nuestras variables de entrada y de entender los coeficientes obtenidos. Como programadores, aprender y aplicar estos modelos nos da herramientas poderosas para el analisis de datos.
+
+\section{Referencias}
+Materiales de clase (2025). UANL.\\
+Bagnato J. (2019). Aprende Machine Learning. Leanpub.
+
+\end{document}
