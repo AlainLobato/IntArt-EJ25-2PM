@@ -1,0 +1,134 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{float}
+
+
+\title{Regresi\'on Lineal}
+\author{Alain Lobato}
+\date{31 de Marzo del 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{Introducci\'on}
+
+La regresi\'on lineal es un m\'etodo utilizado en el an\'alisis de datos que permite predecir valores desconocidos en funci\'on de otros valores conocidos que est\'an relacionados. 
+Este m\'etodo establece una ecuaci\'on lineal:
+
+\begin{equation}
+Y = mx + b
+\end{equation}
+
+que representa la relaci\'on entre la variable dependiente (desconocida) y la variable independiente (conocida). Se centra en representar gr\'aficamente la relaci\'on entre dos variables: \textit{x} (variable independiente) y \textit{y} (variable dependiente). 
+
+En el \'ambito del Machine Learning, los algoritmos analizan grandes vol\'umenes de datos y determinan la ecuaci\'on de regresi\'on lineal a partir de estos.
+
+\section{Metodolog\'ia}
+
+Primero, clonamos nuestro repositorio de la materia en nuestra m\'aquina y creamos una carpeta llamada ``Linear Regression''. Descargamos el archivo CSV para extraer los datos y creamos un archivo llamado \texttt{linear\_regression.py} donde desarrollamos nuestro c\'odigo usando Visual Studio Code.
+
+Iniciamos importando las librer\'ias necesarias, instalando las dependencias en caso de ser necesario:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/1.png}
+    \caption{Importaci\'on de librer\'ias}
+\end{figure}
+
+Ahora leemos el archivo CSV e imprimimos el tama\~no de nuestra tabla, los primeros 5 registros y realizamos una descripci\'on de los datos:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/2.png}
+    \caption{Lectura del archivo CSV}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/3.png}
+    \caption{Descripci\'on del DataFrame}
+\end{figure}
+
+Ahora eliminamos algunas variables irrelevantes y mostramos un histograma de los datos:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/4.png}
+    \caption{Eliminaci\'on de variables innecesarias}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/5.png}
+    \caption{Histogramas generados}
+\end{figure}
+
+Luego, filtramos la data considerando solo registros con menos de 3500 palabras y 80000 compartidos. Pintamos de azul los puntos con menos de 1808 palabras y de naranja los que superan esta cantidad:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/6.png}
+    \caption{Filtrado de datos}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/7.png}
+    \caption{Gr\'afico de distribuci\'on de datos}
+\end{figure}
+
+Ahora, con \texttt{sklearn}, implementamos regresi\'on lineal para predecir valores, entrenando primero nuestro modelo e imprimiendo los coeficientes obtenidos:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/8.png}
+    \caption{Entrenamiento del modelo}
+\end{figure}
+
+Obtenemos los siguientes coeficientes:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/9.png}
+    \caption{Coeficientes obtenidos}
+\end{figure}
+
+Lo que nos da la siguiente funci\'on lineal:
+
+\begin{equation}
+y = 11200x + 5.69
+\end{equation}
+
+\section{Resultados}
+
+Ahora que tenemos nuestro modelo, realizamos una predicci\'on:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/10.png}
+    \caption{Predicci\'on con el modelo}
+\end{figure}
+
+El resultado obtenido es:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/11.png}
+    \caption{Resultado de la predicci\'on}
+\end{figure}
+
+Podemos ver que al predecir para 2000 palabras, obtenemos que ser\'a compartido aproximadamente 22,595 veces.
+
+\section{Conclusi\'on}
+
+El uso de la regresi\'on lineal es bastante interesante. A pesar de ser un tema visto en estad\'istica, es impresionante lo intuitivo que resulta cuando se aplica en programaci\'on. La facilidad con la que podemos implementar estos modelos nos permite analizar grandes vol\'umenes de datos de manera r\'apida y efectiva. Este ejercicio ayud\'o a entender mejor el funcionamiento del m\'etodo y la utilidad que tiene en la investigaci\'on y desarrollo de distintas aplicaciones.
+
+\section{Referencias}
+
+Materiales de clase (2025). UANL.\\
+Bagnato J. (2019). Aprende Machine Learning. Leanpub.
+
+\end{document}
