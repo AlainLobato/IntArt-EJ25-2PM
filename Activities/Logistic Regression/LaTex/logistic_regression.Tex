@@ -1,0 +1,135 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{amsmath}
+
+\begin{document}
+
+\title{Regresión Logística}
+\author{Alain Lobato}
+\date{31 de Marzo de 2025}
+\maketitle
+
+\section{Introducción}
+La regresión logística es una técnica de análisis de datos que nos permite encontrar patrones en las relaciones entre variables. A diferencia de la regresión lineal, en este caso, la salida es discreta, es decir, los resultados se limitan a categorías específicas como "sí" o "no". Se considera un algoritmo supervisado de clasificación que se usa en problemas donde las respuestas están dentro de un conjunto finito de opciones.
+
+\section{Metodología}
+
+Primero, clonamos nuestro repositorio de la materia en nuestra máquina y creamos una carpeta llamada ``Logistic Regression''. Descargamos el archivo CSV y creamos un archivo llamado \texttt{logistic\_regression.py} donde desarrollamos nuestro código usando Visual Studio Code.
+
+Iniciamos importando las librerías necesarias e instalando las dependencias en caso de ser necesario.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/1.png}
+    \caption{Importación de librerías necesarias}
+\end{figure}
+
+Ahora leemos el archivo CSV y verificamos su correcta lectura imprimiendo los primeros 5 registros y una tabla con estadísticas generales del dataframe.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/2.png}
+    \caption{Lectura del archivo CSV}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/3.png}
+    \caption{Descripción estadística del dataframe}
+\end{figure}
+
+Luego agrupamos los datos por clase y creamos histogramas para visualizar la distribución.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/4.png}
+    \caption{Agrupación de datos por clase}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/5.png}
+    \caption{Histogramas de datos}
+\end{figure}
+
+Generamos una gráfica que nos permite visualizar la entrada y salida de usuarios en distintos sistemas operativos.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/6.png}
+    \caption{Gráfica de entrada y salida de usuarios en SO}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/7.png}
+    \caption{Distribución de usuarios en distintos SO}
+\end{figure}
+
+Ahora creamos nuestro modelo de regresión logística, asignando las variables de entrada y la variable objetivo, para posteriormente entrenarlo.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/8.png}
+    \caption{Creación y entrenamiento del modelo}
+\end{figure}
+
+Revisamos la precisión del modelo y realizamos una predicción basada en los datos del CSV.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/9.png}
+    \caption{Revisión del puntaje del modelo}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/10.png}
+    \caption{Resultados de la predicción}
+\end{figure}
+
+Ahora repetimos el modelo de regresión logística, utilizando el 80\% de los datos para entrenamiento.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/11.png}
+    \caption{Modelo de regresión logística con 80\% de datos}
+\end{figure}
+
+Finalmente, realizamos predicciones con nuestro modelo utilizando \textit{cross-validation}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/12.png}
+    \caption{Validación cruzada}
+\end{figure}
+
+\section{Resultados}
+
+Vamos a predecir para un usuario con 10 de duración, 3 páginas, 5 acciones y 9 de valor, obteniendo el siguiente resultado:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/13.png}
+    \caption{Predicción del modelo}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/14.png}
+    \caption{Resultado de la predicción}
+\end{figure}
+
+Como podemos ver, el modelo predice que el usuario pertenece a la categoría 2, lo que indica que es un usuario de Linux.
+
+\section{Conclusiones}
+
+La regresión logística resulta una herramienta bastante útil en la clasificación de datos, permitiendo predecir categorías específicas a partir de ciertas características. Su implementación en Python con \texttt{sklearn} facilita la creación y evaluación de modelos de clasificación. Durante este ejercicio, reforcé mis conocimientos sobre la aplicación práctica de este algoritmo, además de comprender mejor el uso de diferentes métricas para evaluar su rendimiento. 
+
+\section{Referencias}
+Materiales de clase (2025). UANL.\\
+Bagnato J. (2019). Aprende Machine Learning. Leanpub.
+
+\end{document}
